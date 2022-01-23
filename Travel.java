@@ -1,27 +1,32 @@
-package com.workshop3.entity;
+package com.workshop.entity;
 
-import java.util.Scanner;
+import com.sun.java_cup.internal.runtime.Scanner;
 
 public class Travel {
 	private String travelCode;
 	private String cityName;
 	private String flight;
 	private int travelType;
+	private int reserved = 0;
 	private int maxPeople;
-	private int reserved;
-	public static final int INDIVIDUAL = 0;
+	public static final int INDIVIDAL = 0;
 	public static final int PACKAGE = 1;
 	
-	public Travel(String travelCode, String cityName, String flight, int travelType, int maxPeople) {
+	public Travel(String travelCode, String cityName, String flight, int travelType,int maxPeople) {
 		this.travelCode = travelCode;
 		this.cityName = cityName;
 		this.flight = flight;
 		this.travelType = travelType;
 		this.maxPeople = maxPeople;
-		reserved = 0;
 	}
 	public String getTravelCode() {
-		return travelCode;
+		string coDe = null;
+		if (coDe == INDIVIDAL) {
+			System.out.println("개별자유여행");
+		}else {
+			System.out.println("패키지 여행");
+		}
+		return coDe;
 	}
 	public String getCityName() {
 		return cityName;
@@ -30,30 +35,30 @@ public class Travel {
 		return flight;
 	}
 	public String getTravelType() {
-		String result = null;
-		if (travelType == INDIVIDUAL) {
-			System.out.println("개발자유여행");
-		}
-		else if (travelType == PACKAGE) {
-			System.out.println("패키지 여행");
-		}
-		return result; 
-		}
+		String re  = getTravelType();
+		return re;
+	}
 	public int getMaxPeople() {
 		return maxPeople;
 	}
 	public int getReserved() {
-		return 3; //임의값
+		return reserved;
 	}
 	public void setReserved(int reserved) {
-		this.reserved = reserved;
+		
 	}
-	public void printTravelInfo() {
-		System.out.println("welcom~안녕하세요~하률여행사입니다.");
-		System.out.println("======< 메뉴 >======");
-		System.out.printf("%1$6s  %2$4s  %3$5s  %3$s    %5$2d명     %5$2d명\n", travelCode, cityName, flight, getTravelType(), maxPeople, reserved);
-		Scanner input  = new Scanner(System.in);
-		System.out.print("원하시는 숫자를 입력해주세요");
-			
+	public void printTravellenfo() {
+		System.out.println("Welcom~ 안녕하세요! 하률 여행사입니다.");
+		System.out.println("=======<<메뉴>>=======");
+		System.out.println("1.전체 여행 상품 조회");
+		System.out.println("2. 개별 자유여행 상품 조회");
+		System.out.println("3. 패키지여행 상품 조회");
+		System.out.println("4. 여행 상품 예약");
+		System.out.println("9. 종료");
+		System.out.println("====================");
+		Scanner = Scanner(System.in);
+		int a = input("##메뉴입력");
+		
 	}
+	
 }
