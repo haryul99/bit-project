@@ -1,31 +1,21 @@
+package com.workshop.entity;
 
 public class Customer {
-	private String ssn;
 	private String name;
-	private Account account;
-	
-	public Customer(String ssn, String name) {
-		
-	}
-	public String getSsn() {
-		return "hi";
-	}
-	public void setSsn(String ssn) {
-		
+	private int age;
+	private String phone;
+	public Customer(String name, int age, String phone) {
+		this.name=name;
+		this.age=age;
+		this.phone=phone;
 	}
 	public String getName() {
-		return "hy";
+		return name;
 	}
-	public void setName(String name) {
-		
+	public int getAge() {
+		return age;
 	}
-	public Account getAccount() {
-		return null;
-	}
-	public void setAccount(Account account) {
-		
-	}
-	public String toString() {
-		return " ";
+	public String getPhone() {
+		return phone;
 	}
 }
