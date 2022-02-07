@@ -1,15 +1,17 @@
+package test;
 
 public class test {
-	    public String sno ;//ÇÐ¹ø
-	    public String name;
-	    public int kor;
-	    public int math;
-	    public int eng;
-	public int getTotal() {
-		return kor + math + eng;
+
+	public static void main(String[] args) {
+		int [] score = {123,123,23,1,3};
 		
+		System.out.println(score[3]);
+		
+		String[] strArray = new String[3];
+		strArray[0] = "Java";
+		strArray[1] = "C++";
+		strArray[2] = "C#";
+
 	}
-	public void printAverage() {
-		System.out.println(getTotal()/3);
-	}
+
 }
