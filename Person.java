@@ -1,12 +1,17 @@
-package day2;
+package day3;
 
-public class Person {
-	final String nation = "Korea";
-	String snn;
-	String name;
+public class Person implements Comparable<Person>{
+	public String name;
+	public int age;
 	
-	public Person(String snn, String name) {
-		this.snn = snn;
+	public Person(String name, int age) {
 		this.name = name;
+		this.age = age;
+	}
+	
+	public int compareTo(Person o) {
+		if(age<o.age) return -1;
+		else if(age == o.age) return 0;
+		else return 1;
 	}
 }
